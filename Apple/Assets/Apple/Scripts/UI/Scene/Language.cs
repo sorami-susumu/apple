@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.SceneManagement;
+using Floppy;
+using Apple.Domain.Model;
+using Apple.Application;
 
 namespace Apple.UI.Scene
 {
@@ -17,9 +19,11 @@ namespace Apple.UI.Scene
             audioSource.PlayOneShot(hoverSE);
         }
 
-        public void Select()
+        public void Select(string lang)
         {
             if (isSelect) return;
+            Disk.Instance.Store("user", new User() { Language = lang });
+            Disk.Instance.Save("user");
             audioSource.PlayOneShot(clickSE);
             isSelect = true;
         }
@@ -28,7 +32,7 @@ namespace Apple.UI.Scene
         {
             if (isSelect && !audioSource.isPlaying)
             {
-                SceneManager.LoadScene("Prologue");
+                CustomUrlAnalyzer.Instance.Analyze("sorami://Title");
             }
         }
     }
