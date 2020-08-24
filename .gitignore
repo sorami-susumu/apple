@@ -69,3 +69,4 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /Apple/[Aa]ssets/[Ss]treamingAssets/aa.meta
 /Apple/[Aa]ssets/[Ss]treamingAssets/aa/*
+!/Apple/Assets/Apple*
