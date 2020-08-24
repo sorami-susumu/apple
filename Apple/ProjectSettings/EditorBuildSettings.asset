@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Apple/Scenes/Title.unity
+    guid: 80c3d5498ea5548919d50823a615f7dc
+  - enabled: 1
+    path: Assets/Apple/Scenes/Language.unity
+    guid: 7ef1d4df807e64a26a6f8298387445c2
+  - enabled: 1
+    path: Assets/Apple/Scenes/Prologue.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
