@@ -15,7 +15,7 @@
 /Apple/[Mm]emoryCaptures/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
-!/Apple/[Aa]ssets/**/*.meta
+/Apple/[Aa]ssets/**/*.meta
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # /[Aa]ssets/AssetStoreTools*
@@ -69,3 +69,6 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /Apple/[Aa]ssets/[Ss]treamingAssets/aa.meta
 /Apple/[Aa]ssets/[Ss]treamingAssets/aa/*
+
+/Apple/Assets/Plugins
+/Apple/Assets/VRM*
