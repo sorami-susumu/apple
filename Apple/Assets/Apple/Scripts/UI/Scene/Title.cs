@@ -7,6 +7,9 @@ namespace Apple.UI.Scene
 {
     public class Title : MonoBehaviour
     {
+        [SerializeField] AudioClip tapToStartSE;
+        [SerializeField] AudioSource audioSource;
+
         private void Awake()
         {
             RedirectIfNoLang();
@@ -29,6 +32,7 @@ namespace Apple.UI.Scene
         public void TapToStart()
         {
             Disk.Instance.Load<User>("user");
+            audioSource.PlayOneShot(tapToStartSE);
             if (Disk.Instance.Get<User>("user")?.LastUrl == null || Disk.Instance.Get<User>("user")?.LastUrl == "")
             {
                 CustomUrlAnalyzer.Instance.Analyze("sorami://Prologue");
